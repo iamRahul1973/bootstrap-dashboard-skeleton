@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\B5;
+namespace IamRahul1973\Skeleton\View\Components;
 
 use Illuminate\View\Component;
 

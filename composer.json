@@ -1,12 +1,12 @@
 {
-    "name": "iamrahul1973/bootstrap-dashboard-bootstrap-dashboard-skeleton",
+    "name": "iamrahul1973/bootstrap-dashboard-skeleton",
     "description": "A starting point for your Laravel Dashboard using Bootstrap",
     "keywords": [
         "iamRahul1973",
         "laravel",
-        "bootstrap-dashboard-bootstrap-dashboard-skeleton"
+        "bootstrap-dashboard-skeleton"
     ],
-    "homepage": "https://github.com/iamrahul1973/bootstrap-dashboard-bootstrap-dashboard-skeleton",
+    "homepage": "https://github.com/iamrahul1973/bootstrap-dashboard-skeleton",
     "license": "MIT",
     "authors": [
         {
@@ -18,7 +18,8 @@
     "require": {
         "php": "^8.0",
         "spatie/laravel-package-tools": "^1.4.3",
-        "illuminate/contracts": "^8.37"
+        "illuminate/contracts": "^8.37",
+        "spatie/laravel-permission": "^4.2"
     },
     "require-dev": {
         "nunomaduro/collision": "^5.3",

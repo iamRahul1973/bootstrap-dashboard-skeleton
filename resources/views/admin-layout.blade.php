@@ -42,14 +42,14 @@
 
 <body>
 
-    @include('admin.partials.svg-icons')
+    @include('bootstrap-dashboard-skeleton::partials.svg-icons')
 
     <main>
-        @include('admin.partials.sidebar')
+        @include('bootstrap-dashboard-skeleton::partials.sidebar')
         <div class="content-area">
-            @include('admin.partials.page-header')
+            @include('bootstrap-dashboard-skeleton::partials.page-header')
             @if (session()->has('status') && session()->get('status') === 'success')
-                <x-b5.alert class="success" />
+                <x-bdskeleton-alert class="success" />
             @endif
             @yield('content')
         </div>

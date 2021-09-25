@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\B5;
+namespace IamRahul1973\Skeleton\View\Components;
 
 use Illuminate\View\Component;
 
@@ -31,6 +31,6 @@ class ModalForm extends Component
      */
     public function render()
     {
-        return view('components.b5.modal-form');
+        return view('bdskeleton::modal-form');
     }
 }

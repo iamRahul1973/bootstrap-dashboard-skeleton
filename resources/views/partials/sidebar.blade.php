@@ -7,26 +7,26 @@
     </a>
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
-        <x-admin.sidebar-item route="admin.home" prefix="admin" icon="speedometer2" label="Home" />
-        <x-admin.sidebar-item route="admin.user.index" prefix="admin/user" icon="people" label="Users" />
+        <x-bdskeleton-sidebar-item route="admin.home" prefix="admin" icon="speedometer2" label="Home" />
+        <x-bdskeleton-sidebar-item route="admin.home" prefix="admin/user" icon="people" label="Users" />
 
-        @php
+        {{-- @php
             $membershipSubmenus = [
                 'admin.membership-plan.index' => 'View All',
                 'admin.membership-plan.create' => 'Add New'
             ]
         @endphp
-        <x-admin.sidebar-item route="admin.membership-plan.index" prefix="admin/membership-plan" icon="cash" 
-            label="Membership Plans" :subMenus="$membershipSubmenus" />
+        <x-bdskeleton-sidebar-item route="admin.membership-plan.index" prefix="admin/membership-plan" icon="cash" 
+            label="Membership Plans" :subMenus="$membershipSubmenus" /> --}}
         
-        @php
+        {{-- @php
             $clubSubMenus = [
                 'admin.club.index' => 'View All',
                 'admin.club.manage' => 'Add New',
                 'admin.club.designations' => 'Designations'
             ];
         @endphp            
-        <x-admin.sidebar-item route="admin.club.index" prefix="admin/club" icon="mic-fill" label="Club" 
+        <x-bdskeleton-sidebar-item route="admin.club.index" prefix="admin/club" icon="mic-fill" label="Club" 
             :subMenus="$clubSubMenus" />
 
         @php
@@ -35,8 +35,8 @@
                 'admin.award.create' => 'Add New',
             ];
         @endphp
-        <x-admin.sidebar-item route="admin.award.index" prefix="admin/award" icon="award" label="Awards" 
-            :subMenus="$awardSubMenus" />
+        <x-bdskeleton-sidebar-item route="admin.award.index" prefix="admin/award" icon="award" label="Awards" 
+            :subMenus="$awardSubMenus" /> --}}
     </ul>
     <hr>
     <div class="dropdown">

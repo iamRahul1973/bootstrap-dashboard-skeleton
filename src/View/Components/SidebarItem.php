@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\Admin;
+namespace IamRahul1973\Skeleton\View\Components;
 
 use Illuminate\View\Component;
 
@@ -66,6 +66,6 @@ class SidebarItem extends Component
      */
     public function render()
     {
-        return view('components.admin.sidebar-item');
+        return view('bootstrap-dashboard-skeleton::components.sidebar-item');
     }
 }
