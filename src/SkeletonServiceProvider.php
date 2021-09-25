@@ -2,8 +2,6 @@
 
 namespace IamRahul1973\Skeleton;
 
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
 use IamRahul1973\Skeleton\Commands\SkeletonCommand;
 use IamRahul1973\Skeleton\View\Components\Alert;
 use IamRahul1973\Skeleton\View\Components\Card;
@@ -11,6 +9,8 @@ use IamRahul1973\Skeleton\View\Components\FullWidthRow;
 use IamRahul1973\Skeleton\View\Components\ModalForm;
 use IamRahul1973\Skeleton\View\Components\SidebarItem;
 use Illuminate\Support\Facades\Route;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class SkeletonServiceProvider extends PackageServiceProvider
 {

@@ -2,9 +2,9 @@
 
 namespace IamRahul1973\Skeleton\Tests;
 
+use IamRahul1973\Skeleton\SkeletonServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use IamRahul1973\Skeleton\SkeletonServiceProvider;
 
 class TestCase extends Orchestra
 {
