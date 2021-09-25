@@ -1,10 +1,10 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace IamRahul1973\Skeleton;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use IamRahul1973\Skeleton\Commands\SkeletonCommand;
 
 class SkeletonServiceProvider extends PackageServiceProvider
 {
@@ -16,10 +16,10 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('bootstrap-dashboard-skeleton')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_skeleton_table')
+            ->hasMigration('create_bootstrap-dashboard-skeleton_table')
             ->hasCommand(SkeletonCommand::class);
     }
 }

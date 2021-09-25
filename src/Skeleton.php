@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace IamRahul1973\Skeleton;
 
 class Skeleton
 {

@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "iamrahul1973/bootstrap-dashboard-bootstrap-dashboard-skeleton",
+    "description": "A starting point for your Laravel Dashboard using Bootstrap",
     "keywords": [
-        ":vendor_name",
+        "iamRahul1973",
         "laravel",
-        ":package_slug"
+        "bootstrap-dashboard-bootstrap-dashboard-skeleton"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/iamrahul1973/bootstrap-dashboard-bootstrap-dashboard-skeleton",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "rahul_cordiace",
+            "email": "rahul.k@cordiace.com",
             "role": "Developer"
         }
     ],
@@ -30,13 +30,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "IamRahul1973\\Skeleton\\": "src",
+            "IamRahul1973\\Skeleton\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "IamRahul1973\\Skeleton\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -49,10 +49,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "IamRahul1973\\Skeleton\\SkeletonServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\SkeletonFacade"
+                "Skeleton": "IamRahul1973\\Skeleton\\SkeletonFacade"
             }
         }
     },
