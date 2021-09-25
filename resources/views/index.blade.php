@@ -1,5 +1,5 @@
-@extends('layouts.admin')
+@extends('bootstrap-dashboard-skeleton::admin-layout')
 
 @section('content')
-    <h3>Hi, Welcome to the Admin Portal!</h3>
+    <h5>Hi There, Build Something Awesome!</h5>
 @endsection

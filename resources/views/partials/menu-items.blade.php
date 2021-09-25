@@ -1,5 +1,5 @@
 <x-bdskeleton-sidebar-item route="admin.home" prefix="admin" icon="speedometer2" label="Home" />
-<x-bdskeleton-sidebar-item route="admin.home" prefix="admin/user" icon="people" label="Users" />
+<x-bdskeleton-sidebar-item route="admin.home" prefix="admin/user" icon="people" label="Menu Item 1" />
 
 @php
     $membershipSubmenus = [
@@ -8,4 +8,4 @@
     ]
 @endphp
 <x-bdskeleton-sidebar-item route="admin.home" prefix="admin/membership-plan" icon="cash" 
-    label="Membership Plans" :subMenus="$membershipSubmenus" />
+    label="Menu Item 2" :subMenus="$membershipSubmenus" />
