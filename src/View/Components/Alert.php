@@ -27,12 +27,15 @@ class Alert extends Component
         switch ($this->class) {
             case 'success':
                 $message = 'Changes Saved Successfully !';
+
                 break;
             case 'danger':
                 $message = 'Someting Went Wrong !';
+
                 break;
             default:
                 $message = 'This is a test Message !';
+
                 break;
         }
 
@@ -44,12 +47,15 @@ class Alert extends Component
         switch ($this->class) {
             case 'success':
                 $icon = 'check-circle-fill';
+
                 break;
             case 'danger':
                 $icon = 'exclamation-triangle';
+
                 break;
             default:
                 $icon = 'exclamation-circle-fill';
+
                 break;
         }
 

@@ -9,6 +9,7 @@ class Skeleton
     public static function getPageTitleFromRoute()
     {
         $exploded = explode('.', request()->route()->getName());
+
         return Str::title($exploded[1]);
     }
 
@@ -16,6 +17,7 @@ class Skeleton
     {
         $exploded = explode('.', request()->route()->getName());
         array_shift($exploded);
+
         return $exploded;
     }
 }
