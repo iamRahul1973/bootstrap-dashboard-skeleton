@@ -19,7 +19,7 @@
         "php": "^8.0",
         "spatie/laravel-package-tools": "^1.4.3",
         "illuminate/contracts": "^8.37",
-        "spatie/laravel-permission": "^4.2"
+        "spatie/laravel-permission": "^5.1"
     },
     "require-dev": {
         "nunomaduro/collision": "^5.3",
