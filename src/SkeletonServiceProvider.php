@@ -41,5 +41,15 @@ class SkeletonServiceProvider extends PackageServiceProvider
             ->group(function () {
                 $this->loadRoutesFrom(base_path('routes/admin.php'));
             });
+        
+        $this->makeMenuViewPublishable();
+    }
+
+    protected function makeMenuViewPublishable()
+    {
+        $this->publishes([
+            $this->package->basePath('/../resources/views/partials/menu-items.blade.php') =>
+                base_path("resources/views/vendor/{$this->package->shortName()}/partials/menu-items.blade.php")
+        ], "{$this->package->shortName()}-menu-items-views");
     }
 }
