@@ -10,6 +10,7 @@ use IamRahul1973\Skeleton\View\Components\Card;
 use IamRahul1973\Skeleton\View\Components\FullWidthRow;
 use IamRahul1973\Skeleton\View\Components\ModalForm;
 use IamRahul1973\Skeleton\View\Components\SidebarItem;
+use Illuminate\Support\Facades\Route;
 
 class SkeletonServiceProvider extends PackageServiceProvider
 {
@@ -30,5 +31,15 @@ class SkeletonServiceProvider extends PackageServiceProvider
             ->hasViewComponent('bdskeleton', SidebarItem::class)
             ->hasAssets()
             ->hasCommand(SkeletonCommand::class);
+    }
+
+    public function packageBooted()
+    {
+        Route::name('admin.')
+            ->prefix('admin')
+            ->middleware(['web', 'auth', 'role:admin'])
+            ->group(function () {
+                $this->loadRoutesFrom(base_path('routes/admin.php'));
+            });
     }
 }
