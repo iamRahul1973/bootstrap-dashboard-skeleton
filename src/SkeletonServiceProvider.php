@@ -17,9 +17,7 @@ class SkeletonServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('bootstrap-dashboard-skeleton')
-            ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_bootstrap-dashboard-skeleton_table')
             ->hasCommand(SkeletonCommand::class);
     }
 }

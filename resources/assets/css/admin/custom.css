@@ -1,0 +1,86 @@
+body {
+    font-size: 14px;
+}
+
+.content-area {
+    width: 100%;
+    padding: 3em;
+    overflow-y: scroll;
+}
+
+.avatar-wrapper {
+    max-width: 250px;
+    padding: 1em;
+    border: 1px solid #6c757d;
+    background-color: #dee2e6;
+}
+
+td.listSvg svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Page Header */
+
+.page-header .page-title h4 {
+    font-size: 20px;
+}
+
+.page-header ol.breadcrumb li {
+    font-size: 12px;
+}
+
+/* Search Dropdown */
+
+.searchResults {
+    position: absolute;
+    background-color: #eceaea;
+    max-height: 325px;
+    overflow-y: scroll;
+}
+
+.searchResults ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    width: 350px;
+}
+
+.searchResults ul li {
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #212529;
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchResults ul li span.email {
+    display: none;
+}
+
+.searchResults ul li:hover {
+    background: #000;
+    cursor: pointer;
+}
+
+.searchResults ul li:hover span.email {
+    display: block;
+}
+
+.selected-items-wrapper .clear-selected:hover {
+    cursor: pointer;
+}
+
+.selected-item {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.membership-plans-wrapper .plan:hover {
+    cursor: pointer;
+}
+
+.award-icon-svg-wrapper {
+    width: 30px;
+}
