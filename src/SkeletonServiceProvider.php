@@ -39,7 +39,11 @@ class SkeletonServiceProvider extends PackageServiceProvider
             ->prefix('admin')
             ->middleware(['web', 'auth', 'role:admin'])
             ->group(function () {
-                $this->loadRoutesFrom(base_path('routes/admin.php'));
+                $routePath = file_exists(base_path('routes/admin.php'))
+                    ? base_path('routes/admin.php')
+                    : $this->package->basePath('/../routes/admin.php');
+
+                $this->loadRoutesFrom($routePath);
             });
 
         $this->makeMenuViewPublishable();
