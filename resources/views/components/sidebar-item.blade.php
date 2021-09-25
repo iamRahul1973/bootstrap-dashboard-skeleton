@@ -10,7 +10,7 @@
             aria-current="page"
         @endif>
         <svg class="bi me-2" width="16" height="16">
-            <use xlink:href="{{ asset('icons/bootstrap-icons.svg') }}#{{ $icon }}" />
+            <use xlink:href="{{ asset('vendor/bootstrap-dashboard-skeleton/icons/bootstrap-icons.svg') }}#{{ $icon }}" />
         </svg>
         {{ $label }}
     </a>
@@ -21,7 +21,7 @@
                     <li>
                         <a href="{{ route($key) }}" class="text-white {{ ($active && (\Request::route()->getName() === $key)) ? 'active' : '' }}">
                             <svg class="bi me-2 mt-1" width="12" height="12">
-                                <use xlink:href="{{ asset('icons/bootstrap-icons.svg') }}#chevron-right" />
+                                <use xlink:href="{{ asset('vendor/bootstrap-dashboard-skeleton/icons/bootstrap-icons.svg') }}#chevron-right" />
                             </svg>
                             {{ $value }}
                         </a>

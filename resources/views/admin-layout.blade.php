@@ -9,9 +9,9 @@
     <title>{{ env('APP_NAME') }} - Admin Portal</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('icons/bootstrap-icons.css') }}" rel="stylesheet">
-    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+    <link href="{{ asset('vendor/bootstrap-dashboard-skeleton/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/bootstrap-dashboard-skeleton/icons/bootstrap-icons.css') }}" rel="stylesheet">
+    <script src="{{ asset('vendor/bootstrap-dashboard-skeleton/js/bootstrap.bundle.min.js') }}"></script>
 
     <style>
         .bd-placeholder-img {
@@ -31,10 +31,8 @@
     </style>
 
     <!-- Custom styles for this template -->
-    <link href="{{ asset('css/admin/sidebars.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/admin/custom.css') }}" rel="stylesheet">
-
-    @livewireStyles
+    <link href="{{ asset('vendor/bootstrap-dashboard-skeleton/css/admin/sidebars.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/bootstrap-dashboard-skeleton/css/admin/custom.css') }}" rel="stylesheet">
 
     {{-- Alpine --}}
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
@@ -55,11 +53,7 @@
         </div>
     </main>
 
-    <script src="{{ asset('js/admin/sidebars.js') }}"></script>
-    <script src="https://unpkg.com/react@16.8.6/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom@16.8.6/umd/react-dom.production.min.js"></script>
-    <script src="{{ asset('vendor/laraberg/js/laraberg.js') }}"></script>
-    @livewireScripts
+    <script src="{{ asset('vendor/bootstrap-dashboard-skeleton/js/admin/sidebars.js') }}"></script>
     @yield('custom-scripts')
 </body>
 
