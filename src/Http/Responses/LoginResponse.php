@@ -10,6 +10,7 @@ class LoginResponse extends ResponsesLoginResponseContract
     public function toResponse($request)
     {
         $redirectTo = Auth::user()->hasRole('admin') ? '/admin' : config('fortify.home');
+
         return $request->wantsJson()
             ? response()->json(['two_factor' => false])
             : redirect()->intended($redirectTo);
