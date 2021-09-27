@@ -29,6 +29,6 @@ class Card extends Component
      */
     public function render()
     {
-        return view('components.b5.card');
+        return view('bootstrap-dashboard-skeleton::components.card');
     }
 }

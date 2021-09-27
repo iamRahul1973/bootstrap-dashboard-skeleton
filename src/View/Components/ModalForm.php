@@ -31,6 +31,6 @@ class ModalForm extends Component
      */
     public function render()
     {
-        return view('bdskeleton::modal-form');
+        return view('bootstrap-dashboard-skeleton::components.modal-form');
     }
 }

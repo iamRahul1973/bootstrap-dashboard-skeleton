@@ -23,6 +23,6 @@ class FullWidthRow extends Component
      */
     public function render()
     {
-        return view('components.b5.full-width-row');
+        return view('bootstrap-dashboard-skeleton::components.full-width-row');
     }
 }
