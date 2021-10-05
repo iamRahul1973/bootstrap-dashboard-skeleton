@@ -4,7 +4,9 @@ namespace IamRahul1973\Skeleton;
 
 use IamRahul1973\Skeleton\Commands\SkeletonCommand;
 use IamRahul1973\Skeleton\View\Components\Alert;
+use IamRahul1973\Skeleton\View\Components\Button;
 use IamRahul1973\Skeleton\View\Components\Card;
+use IamRahul1973\Skeleton\View\Components\FormInput;
 use IamRahul1973\Skeleton\View\Components\FullWidthRow;
 use IamRahul1973\Skeleton\View\Components\ModalForm;
 use IamRahul1973\Skeleton\View\Components\SidebarItem;
@@ -29,6 +31,8 @@ class SkeletonServiceProvider extends PackageServiceProvider
             ->hasViewComponent('bdskeleton', FullWidthRow::class)
             ->hasViewComponent('bdskeleton', ModalForm::class)
             ->hasViewComponent('bdskeleton', SidebarItem::class)
+            ->hasViewComponent('bdskeleton', FormInput::class)
+            ->hasViewComponent('bdskeleton', Button::class)
             ->hasAssets()
             ->hasCommand(SkeletonCommand::class);
     }
