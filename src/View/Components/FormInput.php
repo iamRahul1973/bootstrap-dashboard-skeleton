@@ -25,6 +25,7 @@ class FormInput extends Component
             'textarea' => 'form-textarea',
             default => 'form-input',
         };
+
         return view('bootstrap-dashboard-skeleton::components.' . $view);
     }
 }
