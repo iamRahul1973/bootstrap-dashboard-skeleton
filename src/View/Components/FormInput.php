@@ -13,13 +13,18 @@ class FormInput extends Component
         public $type = 'text',
         public $col = 4,
         public $defaultValue = '',
-        public $error = null
+        public $error = null,
+        public $textareaRows = 4,
     ) {
         //
     }
 
     public function render()
     {
-        return view('bootstrap-dashboard-skeleton::components.form-input');
+        $view = match ($this->type) {
+            'textarea' => 'form-textarea',
+            default => 'form-input',
+        };
+        return view('bootstrap-dashboard-skeleton::components.' . $view);
     }
 }
