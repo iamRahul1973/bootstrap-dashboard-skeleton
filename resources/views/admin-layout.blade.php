@@ -34,6 +34,8 @@
     <link href="{{ asset('vendor/bootstrap-dashboard-skeleton/css/admin/sidebars.css') }}" rel="stylesheet">
     <link href="{{ asset('vendor/bootstrap-dashboard-skeleton/css/admin/custom.css') }}" rel="stylesheet">
 
+    @includeIf('admin.partials.extra-header')
+
     {{-- Alpine --}}
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
 </head>
@@ -54,6 +56,7 @@
     </main>
 
     <script src="{{ asset('vendor/bootstrap-dashboard-skeleton/js/admin/sidebars.js') }}"></script>
+    @includeIf('admin.partials.extra-footer')
     @yield('custom-scripts')
 </body>
 
