@@ -6,22 +6,20 @@ use Illuminate\View\Component;
 
 class ModalForm extends Component
 {
-    public $modalId;
-    public $modalTitle;
-    public $formAction;
-    public $method;
-
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($modalId, $modalTitle, $formAction, $method = 'POST')
-    {
-        $this->modalId = $modalId;
-        $this->modalTitle = $modalTitle;
-        $this->formAction = $formAction;
-        $this->method = $method;
+    public function __construct(
+        public $id,
+        public $title,
+        public $action,
+        public $method = 'POST',
+        public $variant = 'primary',
+        public $submitLabel = 'Save Changes'
+    ) {
+        //
     }
 
     /**
