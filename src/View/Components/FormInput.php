@@ -15,6 +15,10 @@ class FormInput extends Component
         public $defaultValue = '',
         public $error = null,
         public $textareaRows = 4,
+        public $disabled = false,
+        public $max = null,
+        public $min = null,
+        public $pattern = null
     ) {
         //
     }
