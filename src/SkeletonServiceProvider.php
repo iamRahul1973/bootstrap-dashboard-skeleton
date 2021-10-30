@@ -11,6 +11,7 @@ use IamRahul1973\Skeleton\View\Components\FormRadio;
 use IamRahul1973\Skeleton\View\Components\FormSelect;
 use IamRahul1973\Skeleton\View\Components\FullWidthRow;
 use IamRahul1973\Skeleton\View\Components\ModalForm;
+use IamRahul1973\Skeleton\View\Components\Modal;
 use IamRahul1973\Skeleton\View\Components\SidebarItem;
 use Illuminate\Support\Facades\Route;
 use Spatie\LaravelPackageTools\Package;
@@ -32,6 +33,7 @@ class SkeletonServiceProvider extends PackageServiceProvider
             ->hasViewComponent('bdskeleton', Card::class)
             ->hasViewComponent('bdskeleton', FullWidthRow::class)
             ->hasViewComponent('bdskeleton', ModalForm::class)
+            ->hasViewComponent('bdskeleton', Modal::class)
             ->hasViewComponent('bdskeleton', SidebarItem::class)
             ->hasViewComponent('bdskeleton', FormInput::class)
             ->hasViewComponent('bdskeleton', FormRadio::class)
