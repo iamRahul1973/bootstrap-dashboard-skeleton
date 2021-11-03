@@ -48,8 +48,9 @@
         @include('bootstrap-dashboard-skeleton::partials.sidebar')
         <div class="content-area">
             @include('bootstrap-dashboard-skeleton::partials.page-header')
-            @if (session()->has('status') && session()->get('status') === 'success')
-                <x-bdskeleton-alert class="success" />
+            @if (session()->has('status'))
+                <x-bdskeleton-alert class="{{ session()->get('status') }}"
+                    :message="session()->has('message') ? session()->get('message') : null" />
             @endif
             @yield('content')
         </div>
