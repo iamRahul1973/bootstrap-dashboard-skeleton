@@ -1,8 +1,8 @@
 <li class="nav-item">
     @php
-        $active = (\Request::route()->getPrefix() === $prefix);
+        $active = (\Request::route()->getName() === $route || array_key_exists(\Request::route()->getName(), $subMenus));
     @endphp
-    <a href="{{ route($route) }}" 
+    <a href="{{ $route !== null ? route($route) : '#' }}" 
         class="nav-link {{ $active ? 'active' : 'text-white' }} {{ !empty($subMenus) ? 'collapsed hassubmenu' : '' }}" 
         @if (!empty($subMenus))
             data-bs-toggle="collapse" data-bs-target="#{{ Str::slug($label) }}-collapse" aria-expanded="{{ $active ? 'true' : 'false' }}"

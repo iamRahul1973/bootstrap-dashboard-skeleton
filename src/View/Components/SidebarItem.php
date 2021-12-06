@@ -50,7 +50,7 @@ class SidebarItem extends Component
      *
      * @return void
      */
-    public function __construct($route, $prefix, $icon, $label, $subMenus = [])
+    public function __construct($prefix, $icon, $label, $route = null, $subMenus = [])
     {
         $this->route = $route;
         $this->prefix = $prefix;
