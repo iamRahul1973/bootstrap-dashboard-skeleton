@@ -108,3 +108,11 @@ main {
 .btn-toggle-nav li {
     margin: 5px 0;
 }
+
+.nav-pills .nav-link:hover {
+    background: #2e988a;
+}
+
+.nav-pills li.nav-item {
+    margin: 5px 0;
+}
