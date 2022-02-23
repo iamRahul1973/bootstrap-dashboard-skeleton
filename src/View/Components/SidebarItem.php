@@ -50,7 +50,7 @@ class SidebarItem extends Component
     /**
      * Whether current menu is active or not
      *
-     * @var boolean
+     * @var bool
      */
     public $isActive = false;
 
@@ -72,7 +72,7 @@ class SidebarItem extends Component
     /**
      * Decide whether the current route is active or not.
      *
-     * @return boolean
+     * @return bool
      */
     private function isActive()
     {
@@ -94,7 +94,7 @@ class SidebarItem extends Component
     /**
      * Whether the route is for a single resource. Edit or Show
      *
-     * @return boolean
+     * @return bool
      */
     private function isSingleResourceRoute(): bool
     {
@@ -108,7 +108,7 @@ class SidebarItem extends Component
      * Ex: if current route is admin.product.show check if
      * admin.product.index is present in sub enu array
      *
-     * @return boolean
+     * @return bool
      */
     private function isIndexVariantPresentInSubMenu(): bool
     {
