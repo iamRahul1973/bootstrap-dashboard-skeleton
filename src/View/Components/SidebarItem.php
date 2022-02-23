@@ -2,6 +2,8 @@
 
 namespace IamRahul1973\Skeleton\View\Components;
 
+use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
 use Illuminate\View\Component;
 
 class SidebarItem extends Component
@@ -46,6 +48,13 @@ class SidebarItem extends Component
     public $subMenus;
 
     /**
+     * Whether current menu is active or not
+     *
+     * @var boolean
+     */
+    public $isActive = false;
+
+    /**
      * Create a new component instance.
      *
      * @return void
@@ -57,6 +66,53 @@ class SidebarItem extends Component
         $this->icon = $icon;
         $this->label = $label;
         $this->subMenus = $subMenus;
+        $this->isActive = $this->isActive();
+    }
+
+    /**
+     * Decide whether the current route is active or not.
+     *
+     * @return boolean
+     */
+    private function isActive()
+    {
+        if (request()->route()->getName() === $this->route) {
+            return true;
+        }
+
+        if (array_key_exists(request()->route()->getName(), $this->subMenus)) {
+            return true;
+        }
+
+        if ($this->isSingleResourceRoute() && $this->isIndexVariantPresentInSubMenu()) {
+            return true;
+        }
+
+        return false;
+    }
+
+    /**
+     * Whether the route is for a single resource. Edit or Show
+     *
+     * @return boolean
+     */
+    private function isSingleResourceRoute(): bool
+    {
+        return in_array(Str::afterLast(request()->route()->getName(), '.'), ['edit', 'show']);
+    }
+
+    /**
+     * Check if current route's index variant is present in
+     * in the sub menu array.
+     *
+     * Ex: if current route is admin.product.show check if
+     * admin.product.index is present in sub enu array
+     *
+     * @return boolean
+     */
+    private function isIndexVariantPresentInSubMenu(): bool
+    {
+        return Arr::exists($this->subMenus, Str::beforeLast(request()->route()->getName(), '.') . '.index');
     }
 
     /**

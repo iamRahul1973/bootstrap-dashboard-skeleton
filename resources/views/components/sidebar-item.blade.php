@@ -1,11 +1,8 @@
 <li class="nav-item">
-    @php
-        $active = (\Request::route()->getName() === $route || array_key_exists(\Request::route()->getName(), $subMenus));
-    @endphp
     <a href="{{ $route !== null ? route($route) : '#' }}" 
-        class="nav-link {{ $active ? 'active' : 'text-white' }} {{ !empty($subMenus) ? 'collapsed hassubmenu' : '' }}" 
+        class="nav-link {{ $isActive ? 'active' : 'text-white' }} {{ !empty($subMenus) ? 'collapsed hassubmenu' : '' }}" 
         @if (!empty($subMenus))
-            data-bs-toggle="collapse" data-bs-target="#{{ Str::slug($label) }}-collapse" aria-expanded="{{ $active ? 'true' : 'false' }}"
+            data-bs-toggle="collapse" data-bs-target="#{{ Str::slug($label) }}-collapse" aria-expanded="{{ $isActive ? 'true' : 'false' }}"
         @else
             aria-current="page"
         @endif>
@@ -15,11 +12,11 @@
         {{ $label }}
     </a>
     @if (!empty($subMenus))
-        <div class="collapse {{ $active ? 'show' : '' }}" id="{{ Str::slug($label) }}-collapse">
+        <div class="collapse {{ $isActive ? 'show' : '' }}" id="{{ Str::slug($label) }}-collapse">
             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1">
                 @foreach ($subMenus as $key => $value)
                     <li>
-                        <a href="{{ route($key) }}" class="text-white {{ ($active && (\Request::route()->getName() === $key)) ? 'active' : '' }}">
+                        <a href="{{ route($key) }}" class="text-white {{ ($isActive && (\Request::route()->getName() === $key)) ? 'active' : '' }}">
                             <svg class="bi me-2 mt-1" width="12" height="12">
                                 <use xlink:href="{{ asset('vendor/bootstrap-dashboard-skeleton/icons/bootstrap-icons.svg') }}#chevron-right" />
                             </svg>
